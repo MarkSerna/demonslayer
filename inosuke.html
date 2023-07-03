@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section id="main-content">
+        <div class="video-personajes">
+            <video src="./audios-videos/escenario3.mp4" autoplay muted loop></video>
+        </div>
+        <div class="menu-container">
+            <div class="menu-items">
+                <!-- botón regresar-->
+                <div class="back-button">
+                    <a href="personajes.html">
+                        <button class="back">
+                            <img src="./images/Regresar.png" alt="regresar">
+                        </button>
+                    </a>
+                    
+                </div>
+
+                <!-- vida del jugador-->
+                <div class="image-and-progress">
+                    <!-- agregar la imagen -->
+                    <img src="./images/level.png" alt="nivel"><br>
+                
+                    <!-- vida del jugador -->
+                    <progress id="progressBarPlayer" value="100" max="100"></progress>
+                
+                    <!-- vida del oponente -->
+                    <progress id="progressBarOpponent" value="100" max="100"></progress>
+                </div>
+
+                <!-- boton para volumen del juego -->
+                <div id="volume-container">
+                    <button id="audio-button" onclick="toggleAudio()">
+                        <img src="./images/volumen.png" alt="volumen">
+                    </button>
+                    <div id="audio-player">
+                        <span class="slider-label">-</span>
+                        <input type="range" id="volume-slider" class="slider" min="0" max="1" step="0.05" value="0.5" onchange="changeVolume()">
+                        <span class="slider-label">+</span>
+                    </div>
+                </div>
+                <audio id="audio" src="./audios-videos/Tengen vs Gyutaro Final Fight.mp3" autoplay loop></audio>
+            </div>         
+        </div>
+    </section>
+
+    <section id="start-button-container" class="center">
+        <button id="start-button" type="button" onclick="startGame()">
+            <img src="./images/inicio boton.png" alt="comenzar">
+        </button>
+    </section>
+
+    <section class="scenario1" style="display: none;">
+        
+        <div class="personaje-monstruo">
+            <img src="./images/003 - Inosuke card.gif" alt="personaje3">
+            <img src="./images/VS.png" alt="vs">
+            <img src="./images/004 - Akaza card.gif" alt="monstruo">
+        </div>
+
+        <div id="ataque" class="button-ataque">
+            <img src="/images/ataques.png" alt="ataques" width="150px"><br>
+            <button id="button-ataque1" type="button" onclick="atacar('agua')">
+                <img src="./images/ataque1.gif" alt="ataque1"><br>
+                <img src="./images/agua.png" alt="agua" width="40px">
+            </button>
+            <button id="button-ataque2" type="button" onclick="atacar('fuego')">
+                <img src="./images/ataque2.gif" alt="ataque2"><br>
+                <img src="./images/fuego.png" alt="fuego" width="40px">
+            </button>
+            <button id="button-ataque3" type="button" onclick="atacar('rayo')">
+                <img src="./images/ataque3.gif" alt="ataque3"><br>
+                <img src="./images/rayo.png" alt="rayo" width="40px">
+            </button>
+        </div>
+        <div id="defensa" class="button-defensa">
+            <img src="/images/Defensa.png" alt="ataques" width="150px"><br>
+            <button id="button-defensa1" type="button" onclick="defender('agua')">
+                <img src="./images/escudo1.gif" alt="defensa1"><br>
+                <img src="./images/agua.png" alt="agua" width="40px">
+            </button>
+            <button id="button-defensa2" type="button" onclick="defender('fuego')">
+                <img src="./images/escudo2.gif" alt="defensa2"><br>
+                <img src="./images/fuego.png" alt="fuego" width="40px">
+            </button>
+            <button id="button-defensa3" type="button" onclick="defender('rayo')">
+                <img src="./images/escudo3.gif" alt="defensa3"><br>
+                <img src="./images/rayo.png" alt="rayo" width="40px">
+            </button>
+        </div>
+    </section>
+
+    
+
+    <script src="/Js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

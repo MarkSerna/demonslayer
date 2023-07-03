@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/style.css">
+    <script defer src="./Js/script.js"></script>
+    <title>Personajes</title>
+</head>
+<body>
+    
+    <section id="main-content">
+        <div class="video-personajes">
+            <video src="./audios-videos/tanjiro-kamado-rojo.mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-items">
+                <!-- botón regresar-->
+                <div class="back-button">
+                    <a href="index.html">
+                        <button class="back">
+                        <img src="./images/Regresar.png" alt="regresar">
+                        </button>
+                    </a>
+                    
+                </div>
+
+                <!-- escoge el personaje de la lista -->
+                <img class="title-image"  src="./images/Escoje.png" alt="Escoje el personaje" width="450">
+
+                <!-- boton para volumen del juego -->
+                <div id="volume-container">
+                    <button id="audio-button" onclick="toggleAudio()">
+                        <img src="./images/volumen.png" alt="volumen">
+                    </button>
+                    <div id="audio-player">
+                        <span class="slider-label">-</span>
+                        <input type="range" id="volume-slider" class="slider" min="0" max="1" step="0.05" value="0.5" onchange="changeVolume()">
+                        <span class="slider-label">+</span>
+                    </div>
+                </div>
+                <audio id="audio" src="./audios-videos/Nezuko Theme.mp3" autoplay loop></audio>
+            </div>         
+        </div>
+        
+    </section>
+
+
+    <!-- Selección de los personajes -->
+    <section class="characters">
+        <div class="choose-personajes">
+            <button type="button">
+                <a href="tanjiro.html">
+                    <img src="./images/Tanjiro.png" alt="Tanjiro"><br>
+                <img src="./images/tanjiro-nombre.png" alt="tanjiro-nombre">
+                </a>
+            </button>
+
+            <button type="button">
+                <a href="zenitsu.html">
+                    <img src="./images/zenitsu.png" alt="Zenitsu"><br>
+                    <img src="./images/Zenitsu-nombre.png" alt="Zenitsu-nombre">
+    
+                </a>
+            </button>
+            
+            <button type="button">
+                <a href="inosuke.html">
+                    <img src="./images/inosuke.png" alt="Inosuke"><br>
+                    <img src="./images/Inosuke-nombre.png" alt="Inosuke-nombre">
+                </a>
+                
+            </button>
+        </div>
+    </section>
+
+</body>
+</html>

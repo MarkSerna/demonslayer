@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -- Menu Index -- */
+
+.container {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 0;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.imagen-principal {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    opacity: 0.7;
+}
+
+.imagen-principal img {
+    max-width: 50%;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+/* -- Fin menu Index -- */
+
+
+/* -- Menu superior -- */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.menu-container img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.menu-container button {
+    width: 50%;
+    max-width: 200px;
+    display: flex;
+    background: transparent;
+    font-size:.8rem;
+    cursor: pointer;
+    border: none!important;
+    outline:none!important;
+}
+
+.menu-container .title-image {
+    object-fit: contain;
+    width: 450px;
+}
+/* -- Fin Menu superior -- */
+
+
+/* -- Video de fondo -- */
+.video-personajes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-personajes video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+/* -- Fin video de fondo -- */
+
+
+/* -- Menu superior -- */
+
+/* volumen */
+#volume-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#audio-player {
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+#volume-slider {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    background: #fff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    cursor: pointer;
+}
+
+.slider-label {
+    font-size: 1rem;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-label:first-child {
+    left: -20px;
+}
+
+.slider-label:last-child {
+    right: -20px;
+}
+
+/* -- media queries y modificaciones para pantallas pequeñas -- */
+@media (max-width: 768px) {
+    .menu-container button {
+        width: 65%;
+        max-width: 300px;
+    }
+
+    #audio-player {
+        top: calc(100% + 20px);
+    }
+}
+/* -- Fin menu superior -- */
+
+
+/* -- Efecto de los botones -- */
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+.button {
+    width: 5%;
+    max-width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button:hover {
+    transition: 0.3s;
+    filter: brightness(1) drop-shadow(0 10px 10px rgba(255,255,255,1));
+}
+
+.choose-personajes {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.choose-personajes img {
+    max-width: 50%;
+    height: auto;
+    display: inline-block;
+    margin-top: 20px;
+}
+/* -- Fin efecto de los botones -- */
+
+
+/* -- Menu escenarios -- */
+.personaje-monstruo {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.personaje-monstruo img {
+    align-items: center;
+    max-width: 16%;
+    height: auto;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#start-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+
+.button-ataque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.button-ataque button {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.button-ataque img {
+    max-width: 40%;
+    height: auto;
+}
+
+
+.button-defensa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.button-defensa button {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.button-defensa img {
+    max-width: 45%;
+    height: auto;
+}
+
+
+/* -- Fin menu choose characters -- */
+
+.image-and-progress {
+    text-align: center;
+}
+
+.image-and-progress img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+/* -- Nivel de vida -- */
+progress {
+    width: 300px;
+    height: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ddd;
+    overflow: hidden;    
+}
+
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+/* Estilos para el fondo */
